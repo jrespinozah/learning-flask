@@ -35,7 +35,7 @@ class Place(object):
 		return int(meters / 80)  
 
 	def wiki_path(self, slug):
-		return urllib.urlparse.urljoin("http://en.wikipedia.org/wiki/", slug.replace(' ', '_'))
+		return urllib.parse.urljoin("http://en.wikipedia.org/wiki/", slug.replace(' ', '_'))
 
 	def address_to_latlng(self, address):
 		g = geocoder.google(address)
